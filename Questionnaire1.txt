@@ -1,0 +1,20 @@
+Quel numéro de jour (quantième) de décembre tombe Noël ?
+25
+Combien y a-t-il de piliers de la gestion d'événement en Java
+3
+Quel est le nom du président français en 2016 ? (juste le nom)
+Hollande
+Quel est le nom du précédent président des Etat-Unis ? (juste le nom)
+Trump
+Combien font 6*12 ?
+72
+Quel est l'équivalent de CFF en Suisse alémanique ?
+SBB
+Combien y a-t-il de groupes en ESIG1 ?
+3
+Comment appelle-t-on les années ayant un 29 février ?
+bissextile
+Comment s'appelle l'intérieur du pain ? (juste le mot)
+mie
+Combien un vélo a-t-il de roues ? (normalement)
+2
