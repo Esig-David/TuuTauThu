@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Quest {
     private ArrayList<Item> q;
 
-    public Quest(ArrayList<Item> q, String nomFichier) {
+    public Quest(ArrayList<Item> q, File nomFichier) {
         this.q = q;
         lectureTexte(nomFichier, q);
     }
@@ -19,9 +19,9 @@ public class Quest {
         this.q = q;
     }
 
-    public void lectureTexte(String nomFichier, ArrayList<Item> itemList){
+    public void lectureTexte(File nomFichier, ArrayList<Item> itemList){
         try{
-            Scanner scannerQuestion = new Scanner(new File(nomFichier));
+            Scanner scannerQuestion = new Scanner(nomFichier);
             while (scannerQuestion.hasNext()){
                 String question = scannerQuestion.nextLine();
                 String reponse = scannerQuestion.nextLine();
