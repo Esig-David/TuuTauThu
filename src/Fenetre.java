@@ -13,7 +13,7 @@ public class Fenetre extends JFrame implements ActionListener {
     JButton question, afficher, quitter, suivant;
     JScrollPane scroll;
     ArrayList<Item> questionnaire;
-    Random rand = new Random();
+    Integer numeroQuestion = 0;
 
     int cptAfficher = 0;
 
@@ -71,24 +71,22 @@ public class Fenetre extends JFrame implements ActionListener {
             fc.pack();
             fc.setVisible(true);
             fc.setLocationRelativeTo(null);
-        }else if (actionEvent.getSource().equals(question)) {
+        } else if (actionEvent.getSource().equals(question)) {
             afficher.setVisible(false);
-            this.setSize(500,300);
-            int nombre_hasard = rand.nextInt(questionnaire.size());
+            this.setSize(500, 300);
             setLayout(new FlowLayout());
             add(suivant);
             suivant.setVisible(true);
-            for (int i = 0; i < questionnaire.size(); i++) {
-                if (i == nombre_hasard){
-                    questions = new JLabel(questionnaire.get(i).getQuestion());
-                    add(questions);
-                    reponse = new JTextField();
-                    reponse.setColumns(35);
-                    add(reponse);
-                }
-            }
-        }else if (actionEvent.getSource().equals(suivant)){
 
+            questions = new JLabel(questionnaire.get(numeroQuestion).getQuestion());
+            add(questions);
+            reponse = new JTextField();
+            reponse.setColumns(35);
+            add(reponse);
+
+        } else if (actionEvent.getSource().equals(suivant)) {
+            numeroQuestion++;
+            questions.setText(questionnaire.get(numeroQuestion).getQuestion());
         }
 
     }
